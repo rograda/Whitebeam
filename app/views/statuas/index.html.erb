@@ -1,0 +1,25 @@
+<h1>Listing statuas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @statuas.each do |statua| %>
+  <tr>
+    <td><%= statua.name %></td>
+    <td><%= statua.content %></td>
+    <td><%= link_to 'Show', statua %></td>
+    <td><%= link_to 'Edit', edit_statua_path(statua) %></td>
+    <td><%= link_to 'Destroy', statua, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Statua', new_statua_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @statua.name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @statua.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_statua_path(@statua) %> |
+<%= link_to 'Back', statuas_path %>
